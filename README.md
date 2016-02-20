@@ -42,7 +42,7 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 6.  Move boot files to the first partition:
 
     ````
-    mv root/boot/\* boot
+    mv root/boot/* boot
     ````
 
 8.  Unmount the two partitions:
@@ -65,6 +65,6 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 # Host Communication
 
 Arch Linux ARM has configured the rootfs with g\_cdc which presents as a usb ethernet on the host.
-The device is configured with the static IP 10.0.0.1/24. A simple DHCP server running so your computer should obtaind IP address automatically:
+The device is configured with the static IP 10.0.0.1/24. A simple DHCP server running so your computer should obtaind IP address automatically.
 
 
