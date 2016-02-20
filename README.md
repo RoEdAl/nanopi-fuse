@@ -1,3 +1,8 @@
+
+[NanoPi web site](http://www.nanopi.org/NanoPi_Feature.html)
+
+-----------
+
 # Install to a micro SD card
 
 Replace **sdX** in the following instructions with the device name for the SD card as it appears on your computer.
@@ -65,9 +70,9 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 # Host Communication
 
 Arch Linux ARM has configured the rootfs with g\_cdc which presents as a usb ethernet on the host.
-The device is configured with the static IP 10.0.0.1/24. A simple DHCP server is running (`dhcpd4` service) so your machine should obtaind IP address automatically.
+The device is configured with the static IP 10.0.0.1/24. A simple DHCP server is running (`dhcpd4` service) so your machine should obtain IP address automatically.
 
-## Configuring NanoPi as DHCP client
+## NanoPi as DHCP client
 
 * Create `/etc/systemd/network/70-gadet-frienlyarm.network` file:
 
@@ -88,13 +93,13 @@ The device is configured with the static IP 10.0.0.1/24. A simple DHCP server is
 
 ## Attaching NanoPi to local network via OpenWrt
 
-It is easy to attach your NanoPi to local network if you have OpenWrt router with USB port:
+It should be easy to attach your NanoPi to local network if you have OpenWrt router with USB port:
 
-### On NanoPi side:
+### On the NanoPi side:
 
 * Configure your NanoPi as DHCP client
 
-### On router (host) side:
+### On the router (host) side:
 
 * Install [`kmod-usb-net-cdc-ether`](https://wiki.openwrt.org/doc/howto/usb.tethering) kernel module:
 
