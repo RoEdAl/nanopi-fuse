@@ -35,7 +35,7 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 
     ````
     wget http://headless.audio/os/ArchLinuxARM-NanoPi-latest.tar.xz
-    bsdtar -xpf ArchLinuxARM-arietta-NanoPi.tar.xz -C root
+    bsdtar -xpf ArchLinuxARM-NanoPi-latest.tar.xz -C root
     sync
     ````
 
