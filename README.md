@@ -1,6 +1,8 @@
 
 [NanoPi web site](http://www.nanopi.org/NanoPi_Feature.html)
 
+![Image of NanoPi](http://www.nanopi.org/image/nanopi/nanopi.jpg)
+
 -----------
 
 # Install to a micro SD card
