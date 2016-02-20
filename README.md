@@ -65,6 +65,50 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 # Host Communication
 
 Arch Linux ARM has configured the rootfs with g\_cdc which presents as a usb ethernet on the host.
-The device is configured with the static IP 10.0.0.1/24. A simple DHCP server running so your computer should obtaind IP address automatically.
+The device is configured with the static IP 10.0.0.1/24. A simple DHCP server is running (`dhcpd4` service) so your machine should obtaind IP address automatically.
 
+## Configuring NanoPi as DHCP client
+
+* Create `/etc/systemd/network/70-gadet-frienlyarm.network` file:
+
+    ````
+    # systemd-networkd .network profile for gadget-firendlyarm
+    [Match]
+    Name=usb0
+
+    [Network]
+    DHCP=ipv4
+    ````
+
+* Disable `dhcpd4` service:
+
+    ````
+    systemctl disable dhcpd4
+    ````
+
+## Attaching NanoPi to local network via OpenWrt
+
+It is easy to attach your NanoPi to local network if you have OpenWrt router with USB port:
+
+### On NanoPi side:
+
+* Configure your NanoPi as DHCP client
+
+### On router (host) side:
+
+* Install [`kmod-usb-net-cdc-ether`](https://wiki.openwrt.org/doc/howto/usb.tethering) kernel module:
+
+    ````
+    opkg install kmod-usb-net-cdc-ether
+    ````
+
+* Attach `usb0` device to `lan` bridge  in `/etc/config/network` configuration file:
+
+    ````
+    config interface lan
+        ....
+        option ifname 'eth0.1 usb0'
+        option type bridge
+        ....
+    ````
 
