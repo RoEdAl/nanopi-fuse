@@ -76,7 +76,7 @@ The device is configured with the static IP 10.0.0.1/24. A simple DHCP server is
 
 ## NanoPi as DHCP client
 
-* Create `/etc/systemd/network/70-gadet-frienlyarm.network` file:
+* Create `/etc/systemd/network/70-gadet-frienlyarm.network` file with the following content:
 
     ````
     # systemd-networkd .network profile for gadget-firendlyarm
