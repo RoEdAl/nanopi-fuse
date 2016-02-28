@@ -123,21 +123,21 @@ It should be easy to attach your NanoPi to local network if you have OpenWrt rou
 
 To load BT firmware run `ap6210bt@1` service (disabled by default):
 
-    ````
-    rfkill unblock bluetooth
-    systemctl start ap6210bt@1
-    ````
+````
+rfkill unblock bluetooth
+systemctl start ap6210bt@1
+````
 
 # BFQ Storage-I/O Scheduler
 
 [Budget Fair Queueing (BFQ) Storage-I/O Scheduler](http://algo.ing.unimo.it/people/paolo/disk_sched) is already compiled into kernel. You can enable it by [`elevator`](http://www.kernel.org/doc/Documentation/kernel-parameters.txt) kernel command line parameter. In `/boot/nanoboot.txt` (first FAT partition) change:
 
-    ````
-    elevator=noop
-    ````
+````
+elevator=noop
+````
     
 to
 
-    ````
-    elevator=bfq
-    ````
+````
+elevator=bfq
+````
