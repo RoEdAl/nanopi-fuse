@@ -114,8 +114,16 @@ It should be easy to attach your NanoPi to local network if you have OpenWrt rou
     ````
     config interface lan
         ....
-        option ifname 'eth0.1 usb0'
+        option ifname '... usb0'
         option type bridge
         ....
     ````
 
+# Bluetooth Activation
+
+To load BT firmware run `ap6210bt@1` service (disabled by default):
+
+    ````
+    rfkill unblock bluetooth
+    systemctl start ap6210bt@1
+    ````
