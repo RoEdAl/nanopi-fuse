@@ -41,7 +41,7 @@ Replace **sdX** in the following instructions with the device name for the SD ca
 5.  Download and extract the root filesystem:
 
     ````
-    wget http://headless.audio/os/ArchLinuxARM-NanoPi-latest.tar.xz
+    wget http://github.com/RoEdAl/nanopi-fuse/releases/download/v1/ArchLinuxARM-NanoPi-latest.tar.xz
     bsdtar -xpf ArchLinuxARM-NanoPi-latest.tar.xz -C root
     sync
     ````
